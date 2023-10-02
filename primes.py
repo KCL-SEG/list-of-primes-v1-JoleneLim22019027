@@ -2,12 +2,14 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 def primes(number_of_primes):
-    list = [2]
+    list = []
     num = 2
+    if number_of_primes >= 1:
+        list = [2]
     while (len(list) < number_of_primes):
         pFlag = True
         i = 0
-        while pFlag and (list[i] <= num):
+        while (pFlag and (i < len(list)) and (list[i] <= num)):
             if (num % list[i] == 0):
                 pFlag = False
             else:
